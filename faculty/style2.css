@@ -1,0 +1,51 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 3px;
+    padding-top: 18px;
+}
+
+tr:nth-child(even) {background-color: gainsboro;}
+
+.submit{
+        padding: 10px 20px;
+        border-radius: 15px;
+        background-color: darkseagreen;
+     }
+.submit:hover, .submit:focus {
+  background-color: green;
+}
+
+ul {padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: cornflowerblue;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    font-size: 25px;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+li a:hover,li a:focus {
+    background-color: blueviolet;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Sign-Up Form</title>
+  <link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body align="center">
+  <div class="container"><center>
+           
+          <h1>Sign Up for Enrollment /&nbsp;&nbsp;<button onclick="window.location.href='index.html'">Sign in</button></h1>
+          
+
+    <form action="register.php" method="post">
+        
+     <b>         
+    <div class="row">
+      <div class="col-25">
+        <label>First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="fname" id="fname" required autocomplete="off"/>
+      </div>
+    </div>
+        
+        
+        <div class="row">
+      <div class="col-25">
+        <label>Middle name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="mname" autocomplete="off"/>
+      </div>
+    </div>
+
+        <div class="row">
+      <div class="col-25">
+        <label>Last name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="lname" id="lname" required autocomplete="off"/>
+      </div>
+    </div>        
+
+         
+         <div class="row">
+    <div class="col-25">
+        <label>Branch</label></div> 
+        <div class="col-75">
+					<select name="branch">
+                    <option disable selected value>---select an option(Not for faculty)---</option>
+					<option value="CSE">Computer Science</option>
+					<option value="MEC">Mechanical</option>
+					<option value="ACC">Accounting</option>
+					<option value="ARTS">Arts</option>
+					<option value="BIO">Biology</option>
+					<option value="BUS">Business Analytics</option>
+					<option value="IT">Information Technology</option>
+					</select></div></div>
+
+          <div class="row">
+              <div class="col-25">
+        <label>School</label></div> 
+        <div class="col-75">
+					<select name="school" required>
+                    <option disable selected value>---select an option---</option>
+                        <option>SCOPE</option>
+					<option>SENSE</option>
+					<option>SMEC</option>
+					<option>SELECT</option>
+					<option>SBST</option>
+					</select></div></div>     
+         
+			
+         <div class="row">
+      <div class="col-25">
+        <label>Phone No</label>
+      </div>
+      <div class="col-75">
+        <input type="number" name="phone" required autocomplete="off" class="number" placeholder="10 digit phone number"/>
+      </div>
+    </div>
+
+         <div class="row">
+      <div class="col-25">
+        <label>E-mail address</label>
+      </div>
+      <div class="col-75">
+          <input type="text" required autocomplete="off" name="email" id="email"/>
+      </div>
+    </div>
+
+         <div class="row">
+      <div class="col-25">
+        <label>User name</label>
+      </div>
+      <div class="col-75">
+          <input type="text" required autocomplete="off" name="username" id="username"/>
+      </div>
+    </div>		
+          
+          
+         <div class="row">
+      <div class="col-25">
+        <label>set a password</label>
+      </div>
+      <div class="col-75">
+         <input type="password"required autocomplete="off" name="password" class="password" id="password"/>
+      </div>
+    </div>
+         
+         
+         <div class="row">
+    <div class="col-25">
+        <label>TYPE</label></div> 
+        <div class="col-75">
+					<select name="type" required>
+                    <option disable selected value>---select an option---</option>
+					<option value="student">student</option>
+                        <option value="faculty">faculty</option>
+					</select></div></div>
+<br>
+         
+          
+            <div class="row">
+      <input type="submit" value="Sign Up" class="submit2" id="button"/>
+    </div>
+          
+         </b> 
+      </form>
+
+<script src='js/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>        
+       
+
+<script type="text/javascript">
+
+$( document ).ready(function(){
+	$('#username').change(function(){
+		$.ajax({
+				url: "checkUser.php", 
+				data: { username: $('#username').val() },
+				type: "GET",
+				context: document.body,
+				success: function(result){
+					if($.trim(result) == "1"){
+				alert("Record for this username already exists");
+					}
+				}
+		});
+    }); 
+	
+	$('#email').change(function(){
+		$.ajax({
+				url: "checkEmail.php", 
+				data: { email: $('#email').val() },
+				type: "GET",
+				context: document.body,
+				success: function(result){
+					if($.trim(result) == "1"){
+				alert("Record for this email already exists \n Please visit our login page if you have already created an account");
+					}
+				}
+		});
+    }); 
+	
+});
+
+</script>
+</center>
+</body>
+</html>

@@ -1,0 +1,16 @@
+c_id,c_name,school,sem,description
+CSE1003,Digital Logic and Design,SCOPE,WIN_SEM19-20,"Embedded Theory, Lab and Project"
+CSE1005,Software Design and Development,SCOPE,WIN_SEM19-20,"Embedded Theory, Lab and Project"
+CSE2001,Computer Architecture and Organization,SCOPE,WIN_SEM19-20,Theory Only
+CSE2003,Data Structures and Algorithms,SCOPE,WIN_SEM19-20,"Embedded Theory, Lab and Project"
+CSE2004,Database Management Systems,SCOPE,WIN_SEM19-20,"Embedded Theory, Lab and Project"
+CSE2005,Operating Systems,SCOPE,WIN_SEM19-20,"Embedded Theory, Lab and Project"
+CSE2006,Microprocessor and Interfacing,SCOPE,WIN_SEM19-20,"Embedded Theory, Lab and Project"
+CSE3002,Internet and Web Programming,SCOPE,WIN_SEM19-20,"Embedded Theory, Lab and Project"
+CSE3099,Industrial Internship,SCOPE,WIN_SEM19-20,Project
+CSE4001,Parallel and Distributed Computing,SCOPE,WIN_SEM19-20,"Embedded Theory, Lab and Project"
+CSE1001,Problem Solving and Programming,SCOPE,WIN_SEM19-20,Lab Only
+CSE1002,Problem Solving and Object Oriented Programming,SCOPE,WIN_SEM19-20,Lab Only
+CSE3999,Technical Answers for Real World Problems (TARP),SCOPE,WIN_SEM19-20,Embedded Theory and Project
+CSE4098,Comprehensive Examination,SCOPE,WIN_SEM19-20,Project
+CSE4099,Capstone Project,SCOPE,WIN_SEM19-20,Project

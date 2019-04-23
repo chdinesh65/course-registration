@@ -1,0 +1,76 @@
+<!DOCTYPE html5>
+
+<html lang="en">
+<head>
+  <title>Login page</title>
+  <link rel="stylesheet" href="../css/style2.css">
+</head>
+
+<body align="center">
+	<bg colour=red>
+  <div class="container">
+
+            <center>
+				<br>
+
+	<img src="vit1.jpg" style="width:500px;height:150px;"
+		 alignment=center/>
+<br>
+				<form action="wauth.php" method="post" id="myform">
+          <br>
+          
+         <div class="row">
+      <div class="col-25">
+        <label>User name</label>
+      </div>
+      <div class="col-75">
+          <input type="text" required autocomplete="off" name="username" id="username"/>
+      </div>
+    </div>		
+          
+          
+         <div class="row">
+      <div class="col-25">
+        <label>password</label>
+      </div>
+      <div class="col-75">
+         <input type="password"required autocomplete="off" name="password" class="password"/>
+      </div>
+    </div><br>
+          
+              <div class="row">
+      <input type="submit" value="Log in" class="submit2">
+				  
+    </div>
+          
+          </form>
+      <h3>Sign In for USERS /&nbsp;&nbsp;<button onclick="window.location.href='../index2.html'">sign up</button></h3>
+				
+				
+          <script src='js/jquery.min.js'></script>
+      <script>
+          $( document ).ready(function() {
+	$('#username').change(function(){
+		$.ajax({
+				url: "checkUser.php", 
+				data: { username: $('#username').val() },
+				type: "GET",
+				context: document.body,
+				success: function(result){
+					if($.trim(result) == "0"){
+            var r = confirm("This user doesn't exists \n You can create an account in SIGNUP Page \n\n click 'ok' to go to SIGNUP page");
+                        if (r == true) {
+                            window.location.href = "index2.html";
+                        } else {
+                            document.getElementById("myform").reset();
+                        }
+					}
+				}
+    });
+    });
+    });
+      </script>
+				</center>
+      
+</body>
+</html>
